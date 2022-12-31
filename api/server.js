@@ -1,4 +1,3 @@
-// import express from "express";
 import cors from "cors";
 import express from 'express';
 import * as dotenv from "dotenv";
@@ -38,10 +37,11 @@ app.post("/", async (req, res) => {
         res.status(200).send({
             bot: response.data.choices[0].text,
         });
-    } catch (error) {
+    }
+    catch (err) {
         console.log("FAILED:", req.body.input);
-        console.error(error);
-        res.status(500).send(error);
+        console.error(err);
+        res.status(500).send(err);
     }
 });
 
