@@ -17,7 +17,8 @@ function App() {
 
     const fetchBotResponse = async () => {
         const { data } = await axios.post(
-            "http://localhost:4000",
+            "https://proton-chatgpt-app.onrender.com",
+            // "http://localhost:4000",
             { input },
             {
                 headers: {
